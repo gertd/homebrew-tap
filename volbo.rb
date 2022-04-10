@@ -5,21 +5,21 @@
 class Volbo < Formula
   desc "Volbo CLI"
   homepage "https://github.com/gertd/volbo"
-  version "0.0.5"
+  version "0.0.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/gertd/volbo/releases/download/v0.0.5/volbo-0.0.5-darwin-arm64.zip"
-      sha256 "5ff9b31bc6f7b822773edd1d2822f1f4c667aada5edef767c72f730be341767a"
+      url "https://github.com/gertd/volbo/releases/download/v0.0.6/volbo-0.0.6-darwin-arm64.zip"
+      sha256 "d4e6ef5d74dbc5b2473a661ff704888d24db56e98d49dcd687de31ed7f2fdc88"
 
       def install
         bin.install "volbo"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gertd/volbo/releases/download/v0.0.5/volbo-0.0.5-darwin-amd64.zip"
-      sha256 "fcbb4c231f626169a460dd1991d7e918717eea772db5308e38a32f2cf953b844"
+      url "https://github.com/gertd/volbo/releases/download/v0.0.6/volbo-0.0.6-darwin-amd64.zip"
+      sha256 "ad8b53b6d9d69b83523a2b7496328cfa29e071d9c88a4fea64d970cc6a9f569f"
 
       def install
         bin.install "volbo"
@@ -29,16 +29,16 @@ class Volbo < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gertd/volbo/releases/download/v0.0.5/volbo-0.0.5-linux-arm64.zip"
-      sha256 "64be37d842d00b18c7137b97ad7cb53fb3687f32a8af50c46d85068ba77b3f4c"
+      url "https://github.com/gertd/volbo/releases/download/v0.0.6/volbo-0.0.6-linux-arm64.zip"
+      sha256 "3bc4a4c706e8bc161c78f47b95d733b16a87fb3f9ec3faaf41085078ffcf581c"
 
       def install
         bin.install "volbo"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gertd/volbo/releases/download/v0.0.5/volbo-0.0.5-linux-amd64.zip"
-      sha256 "047214bf72f5309b64472fb562f36baf457bd1a7e6667d61f009529ab5ef484c"
+      url "https://github.com/gertd/volbo/releases/download/v0.0.6/volbo-0.0.6-linux-amd64.zip"
+      sha256 "e25b36069f726ba690c8e15ef1b5d7f04c964924faf95df787040f9c042549e4"
 
       def install
         bin.install "volbo"
