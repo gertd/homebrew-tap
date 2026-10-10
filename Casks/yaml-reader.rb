@@ -33,9 +33,9 @@ cask "yaml-reader" do
 
   binary "yaml-reader"
 
-  postflight do
-    if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/yaml-reader"]
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/yaml-reader"]
     end
   end
 
